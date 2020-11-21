@@ -8,6 +8,10 @@ class Rules
     
     public function rules($choice1, $choice2)
     {
+        if ($choice1 === $choice2)
+        {
+           return $winner = 'tied game';
+        }
         if ($choice1 === 'rock')
 
             {
@@ -18,9 +22,6 @@ class Rules
                         break;
                     case ($choice2 === 'scissors'):
                         $winner ='rock wins';
-                        break;
-                    case ($choice2 === 'rock'):
-                        $winner = 'tied game';
                         break;
                     case ($choice2 === 'lizzard'):
                         $winner = 'rock wins';
@@ -36,9 +37,6 @@ class Rules
         {
             switch($choice1 === 'paper')
                 {
-                    case ($choice2 === 'paper'):
-                        $winner = 'tied game';
-                        break;
                     case ($choice2 === 'scissors'):
                         $winner ='scissors wins';
                         break;
@@ -61,9 +59,6 @@ class Rules
                     case ($choice2 === 'paper'):
                         $winner = 'scissors wins';
                         break;
-                    case ($choice2 === 'scissors'):
-                        $winner ='tied game';
-                        break;
                     case ($choice2 === 'rock'):
                         $winner = 'rock wins';
                         break;
@@ -84,9 +79,6 @@ class Rules
                     case ($choice2 === 'paper'):
                         $winner = 'lizzard wins';
                         break;
-                    case ($choice2 === 'lizzard'):
-                        $winner ='tied game';
-                        break;
                     case ($choice2 === 'rock'):
                         $winner = 'rock wins';
                         break;
@@ -105,9 +97,6 @@ class Rules
                 {
                     case ($choice2 === 'paper'):
                         $winner = 'paper wins';
-                        break;
-                    case ($choice2 === 'spock'):
-                        $winner ='tied game';
                         break;
                     case ($choice2 === 'rock'):
                         $winner = 'spock wins';
