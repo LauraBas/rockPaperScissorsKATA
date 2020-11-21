@@ -36,4 +36,36 @@ class RockPaperScissorsTest extends TestCase {
 		
 		$this->assertEquals('scissors wins', $result);
 	}
+
+	public function test_return_scissors_win()
+	{
+		$game = new Game('scissors','lizzard');
+		$result = $game->play();
+		
+		$this->assertEquals('scissors win', $result);
+	}
+
+	public function test_return_spock_win()
+	{
+		$game = new Game('spock','rock');
+		$result = $game->play();
+		
+		$this->assertEquals('spock wins', $result);
+	}
+
+	public function test_return_lizzard_wins()
+	{
+		$game = new Game('lizzard','paper');
+		$result = $game->play();
+		
+		$this->assertEquals('lizzard wins', $result);
+	}
+
+	public function test_return_spock_wins()
+	{
+		$game = new Game('spock','scissors');
+		$result = $game->play();
+		
+		$this->assertEquals('spock wins', $result);
+	}
 }

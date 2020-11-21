@@ -22,11 +22,17 @@ class Rules
                     case ($choice2 === 'rock'):
                         $winner = 'tied game';
                         break;
+                    case ($choice2 === 'lizzard'):
+                        $winner = 'rock wins';
+                        break;
+                    case ($choice2 === 'spock'):
+                        $winner = 'spock wins';
+                        break;
                 }
             
                 return $winner;
             }
-        else if ($choice1 === 'paper')
+        if ($choice1 === 'paper')
         {
             switch($choice1 === 'paper')
                 {
@@ -39,10 +45,16 @@ class Rules
                     case ($choice2 === 'rock'):
                         $winner = 'paper wins';
                         break;
+                    case ($choice2 === 'lizzard'):
+                        $winner = 'lizzard wins';
+                        break;
+                    case ($choice2 === 'spock'):
+                        $winner = 'paper wins';
+                        break;
                 }
                 return $winner;            
         } 
-        else
+        if ($choice1 === 'scissors')
         {
             switch($choice1 === 'scissors')
                 {
@@ -54,6 +66,57 @@ class Rules
                         break;
                     case ($choice2 === 'rock'):
                         $winner = 'rock wins';
+                        break;
+                    case ($choice2 === 'spock'):
+                        $winner = 'spock wins';
+                        break;
+                    case ($choice2 === 'lizzard'):
+                        $winner = 'scissors win';
+                        break;
+
+                }
+                return $winner;     
+        }       
+        if ($choice1 === 'lizzard')
+        {
+            switch($choice1 === 'lizzard')
+                {
+                    case ($choice2 === 'paper'):
+                        $winner = 'lizzard wins';
+                        break;
+                    case ($choice2 === 'lizzard'):
+                        $winner ='tied game';
+                        break;
+                    case ($choice2 === 'rock'):
+                        $winner = 'rock wins';
+                        break;
+                    case ($choice2 === 'spock'):
+                        $winner = 'lizzard wins';
+                        break;
+                    case ($choice2 === 'scissors'):
+                        $winner = 'scissors win';
+                        break;
+                }
+                return $winner;     
+        }       
+        if ($choice1 === 'spock')
+        {
+            switch($choice1 === 'spock')
+                {
+                    case ($choice2 === 'paper'):
+                        $winner = 'paper wins';
+                        break;
+                    case ($choice2 === 'spock'):
+                        $winner ='tied game';
+                        break;
+                    case ($choice2 === 'rock'):
+                        $winner = 'spock wins';
+                        break;
+                    case ($choice2 === 'scissors'):
+                        $winner = 'spock wins';
+                        break;
+                    case ($choice2 === 'lizzard'):
+                        $winner = 'lizzard wins';
                         break;
                 }
                 return $winner;     
