@@ -1,4 +1,4 @@
-# RPG Combat Kata
+# Rock Paper Scissors Lizzard Spock Kata
 
 ## Requiered
 
